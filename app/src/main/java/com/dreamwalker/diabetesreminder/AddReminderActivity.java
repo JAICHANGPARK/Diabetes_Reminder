@@ -25,22 +25,20 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.delaroystudios.alarmreminder.data.AlarmReminderContract;
-import com.delaroystudios.alarmreminder.reminder.AlarmScheduler;
+import com.dreamwalker.diabetesreminder.data.AlarmReminderContract;
+import com.dreamwalker.diabetesreminder.reminder.AlarmScheduler;
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
-import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 import java.util.Calendar;
 
-/**
- * Created by delaroy on 10/26/17.
- */
+
 
 public class AddReminderActivity extends AppCompatActivity implements
         TimePickerDialog.OnTimeSetListener,
-        DatePickerDialog.OnDateSetListener, LoaderManager.LoaderCallbacks<Cursor> {
+        DatePickerDialog.OnDateSetListener,
+        LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final int EXISTING_VEHICLE_LOADER = 0;
 
@@ -259,8 +257,9 @@ public class AddReminderActivity extends AppCompatActivity implements
     }
 
     // Obtain time from time picker
+
     @Override
-    public void onTimeSet(RadialPickerLayout view, int hourOfDay, int minute) {
+    public void onTimeSet(TimePickerDialog view, int hourOfDay, int minute, int second) {
         mHour = hourOfDay;
         mMinute = minute;
         if (minute < 10) {
@@ -697,12 +696,10 @@ public class AddReminderActivity extends AppCompatActivity implements
 
         }
 
-
     }
 
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
 
     }
-
 }

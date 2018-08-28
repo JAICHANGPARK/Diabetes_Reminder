@@ -11,7 +11,8 @@ import android.widget.TextView;
 
 import com.amulyakhare.textdrawable.TextDrawable;
 import com.amulyakhare.textdrawable.util.ColorGenerator;
-import com.delaroystudios.alarmreminder.data.AlarmReminderContract;
+import com.dreamwalker.diabetesreminder.data.AlarmReminderContract;
+
 
 /**
  * Created by delaroy on 10/27/17.
@@ -20,13 +21,14 @@ import com.delaroystudios.alarmreminder.data.AlarmReminderContract;
 public class AlarmCursorAdapter extends CursorAdapter {
 
     private TextView mTitleText, mDateAndTimeText, mRepeatInfoText;
-    private ImageView mActiveImage , mThumbnailImage;
+    private ImageView mActiveImage, mThumbnailImage;
     private ColorGenerator mColorGenerator = ColorGenerator.DEFAULT;
     private TextDrawable mDrawableBuilder;
 
     public AlarmCursorAdapter(Context context, Cursor c) {
         super(context, c, 0 /* flags */);
     }
+
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         return LayoutInflater.from(context).inflate(R.layout.alarm_items, parent, false);
@@ -57,35 +59,26 @@ public class AlarmCursorAdapter extends CursorAdapter {
         String repeatType = cursor.getString(repeatTypeColumnIndex);
         String active = cursor.getString(activeColumnIndex);
 
-
-
-
         setReminderTitle(title);
 
-        if (date != null){
+        if (date != null) {
             String dateTime = date + " " + time;
             setReminderDateTime(dateTime);
-        }else{
+        } else {
             mDateAndTimeText.setText("Date not set");
         }
 
-        if(repeat != null){
+        if (repeat != null) {
             setReminderRepeatInfo(repeat, repeatNo, repeatType);
-        }else{
+        } else {
             mRepeatInfoText.setText("Repeat Not Set");
         }
 
-        if (active != null){
+        if (active != null) {
             setActiveImage(active);
-        }else{
+        } else {
             mActiveImage.setImageResource(R.drawable.ic_notifications_off_grey600_24dp);
         }
-
-
-
-
-
-
     }
 
     // Set reminder title view
@@ -93,15 +86,14 @@ public class AlarmCursorAdapter extends CursorAdapter {
         mTitleText.setText(title);
         String letter = "A";
 
-        if(title != null && !title.isEmpty()) {
+        if (title != null && !title.isEmpty()) {
             letter = title.substring(0, 1);
         }
 
         int color = mColorGenerator.getRandomColor();
 
         // Create a circular icon consisting of  a random background colour and first letter of title
-        mDrawableBuilder = TextDrawable.builder()
-                .buildRound(letter, color);
+        mDrawableBuilder = TextDrawable.builder().buildRound(letter, color);
         mThumbnailImage.setImageDrawable(mDrawableBuilder);
     }
 
@@ -112,18 +104,18 @@ public class AlarmCursorAdapter extends CursorAdapter {
 
     // Set repeat views
     public void setReminderRepeatInfo(String repeat, String repeatNo, String repeatType) {
-        if(repeat.equals("true")){
+        if (repeat.equals("true")) {
             mRepeatInfoText.setText("Every " + repeatNo + " " + repeatType + "(s)");
-        }else if (repeat.equals("false")) {
+        } else if (repeat.equals("false")) {
             mRepeatInfoText.setText("Repeat Off");
         }
     }
 
     // Set active image as on or off
-    public void setActiveImage(String active){
-        if(active.equals("true")){
+    public void setActiveImage(String active) {
+        if (active.equals("true")) {
             mActiveImage.setImageResource(R.drawable.ic_notifications_on_white_24dp);
-        }else if (active.equals("false")) {
+        } else if (active.equals("false")) {
             mActiveImage.setImageResource(R.drawable.ic_notifications_off_grey600_24dp);
         }
 
