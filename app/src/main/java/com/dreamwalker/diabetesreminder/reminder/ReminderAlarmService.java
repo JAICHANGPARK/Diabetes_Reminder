@@ -51,6 +51,7 @@ public class ReminderAlarmService extends IntentService {
         Cursor cursor = getContentResolver().query(uri, null, null, null, null);
 
         String description = "";
+
         try {
             if (cursor != null && cursor.moveToFirst()) {
                 description = AlarmReminderContract.getColumnString(cursor, AlarmReminderContract.AlarmReminderEntry.KEY_TITLE);

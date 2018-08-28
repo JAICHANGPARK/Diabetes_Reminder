@@ -66,20 +66,15 @@ public class HomeActivity extends AppCompatActivity implements LoaderManager.Loa
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 
                 Intent intent = new Intent(HomeActivity.this, AddReminderActivity.class);
-
                 Uri currentVehicleUri = ContentUris.withAppendedId(AlarmReminderContract.AlarmReminderEntry.CONTENT_URI, id);
-
                 // Set the URI on the data field of the intent
                 intent.setData(currentVehicleUri);
-
                 startActivity(intent);
-
             }
         });
 
 
         mAddReminderButton = (FloatingActionButton) findViewById(R.id.fab);
-
         mAddReminderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,7 +84,8 @@ public class HomeActivity extends AppCompatActivity implements LoaderManager.Loa
             }
         });
 
-        getSupportLoaderManager().initLoader(VEHICLE_LOADER, null, this);
+//        LoaderManager.getInstance(this).initLoader(VEHICLE_LOADER, null,  this);
+        getSupportLoaderManager().initLoader(VEHICLE_LOADER, null,  this);
 
 
     }
@@ -114,7 +110,6 @@ public class HomeActivity extends AppCompatActivity implements LoaderManager.Loa
                 null,                   // No selection clause
                 null,                   // No selection arguments
                 null);                  // Default sort order
-
     }
 
     @Override
