@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--<provider-->
+            <!--android:name=".AlarmReminderProvider"-->
+            <!--android:authorities="com.dreamwalker.diabetesreminder"-->
+            <!--android:exported="true"-->
+            <!--android:enabled="true"/>-->
     </application>
 
 </manifest>
