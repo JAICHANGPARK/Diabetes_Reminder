@@ -32,7 +32,8 @@
         <provider
             android:name=".data.AlarmReminderProvider"
             android:authorities="com.dreamwalker.diabetesreminder"
-            android:exported="false" />
+            android:exported="true"
+            android:enabled="true"/>
 
         <service
             android:name=".reminder.ReminderAlarmService"
