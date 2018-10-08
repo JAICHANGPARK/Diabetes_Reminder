@@ -19,6 +19,7 @@ import android.text.InputType;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -131,11 +132,16 @@ public class HomeActivity extends AppCompatActivity implements LoaderManager.Loa
 
     public void addReminderTitle(){
 
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Set Reminder Title");
 
         final EditText input = new EditText(this);
         input.setInputType(InputType.TYPE_CLASS_TEXT);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        lp.setMargins(16, 8, 16, 8);
+        input.setLayoutParams(lp);
+
         builder.setView(input);
 
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -169,6 +175,7 @@ public class HomeActivity extends AppCompatActivity implements LoaderManager.Loa
                 dialog.cancel();
             }
         });
+
 
         builder.show();
     }
