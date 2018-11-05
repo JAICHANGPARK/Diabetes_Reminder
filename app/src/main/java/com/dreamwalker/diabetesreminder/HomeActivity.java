@@ -144,7 +144,7 @@ public class HomeActivity extends AppCompatActivity implements LoaderManager.Loa
 
         builder.setView(input);
 
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 if (input.getText().toString().isEmpty()){
@@ -169,7 +169,7 @@ public class HomeActivity extends AppCompatActivity implements LoaderManager.Loa
 
             }
         });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
