@@ -26,7 +26,7 @@
         <activity android:name=".AddReminderActivity"
             android:label="@string/title_activity_add_reminder"
             android:parentActivityName=".HomeActivity"
-            android:theme="@style/AppTheme2">
+            android:theme="@style/HomeTheme">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

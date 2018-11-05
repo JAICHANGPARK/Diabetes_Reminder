@@ -14,14 +14,14 @@
         app:contentInsetLeft="0dp"
         app:contentInsetStart="16dp"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:background="?attr/colorPrimary" />
+        android:background="@color/colorPrimary2" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_below="@+id/toolbar"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:id="@+id/add_reminder_layout_top"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimary2"
         android:orientation="vertical"
         android:layout_height="148dp">
 
@@ -62,7 +62,7 @@
                 android:textSize="15dp"
                 android:gravity="center_vertical"
                 android:layout_marginLeft="72dp"
-                android:textColor="@color/abc_secondary_text_material_dark"
+                android:textColor="@android:color/black"
                 android:layout_height="72dp"/>
 
             <RelativeLayout
@@ -92,7 +92,7 @@
 
                     <TextView
                         android:id="@+id/date_text"
-                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:textColor="@android:color/black"
                         android:layout_width="wrap_content"
                         android:textSize="15dp"
                         android:layout_height="wrap_content"
@@ -102,7 +102,7 @@
                         android:layout_width="wrap_content"
                         android:id="@+id/set_date"
                         android:textSize="15dp"
-                        android:textColor="@color/abc_secondary_text_material_dark"
+                        android:textColor="@android:color/black"
                         android:layout_height="wrap_content"/>
 
                 </LinearLayout>
@@ -136,7 +136,7 @@
 
                     <TextView
                         android:id="@+id/time_text"
-                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:textColor="@android:color/black"
                         android:layout_width="wrap_content"
                         android:textSize="15dp"
                         android:layout_height="wrap_content"
@@ -146,7 +146,7 @@
                         android:layout_width="wrap_content"
                         android:id="@+id/set_time"
                         android:textSize="15dp"
-                        android:textColor="@color/abc_secondary_text_material_dark"
+                        android:textColor="@android:color/black"
                         android:layout_height="wrap_content"/>
 
                 </LinearLayout>
@@ -178,7 +178,7 @@
 
                     <TextView
                         android:id="@+id/repeat_text"
-                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:textColor="@android:color/black"
                         android:layout_width="wrap_content"
                         android:textSize="15dp"
                         android:layout_height="wrap_content"
@@ -188,7 +188,7 @@
                         android:layout_width="wrap_content"
                         android:id="@+id/set_repeat"
                         android:textSize="15dp"
-                        android:textColor="@color/abc_secondary_text_material_dark"
+                        android:textColor="@android:color/black"
                         android:layout_height="wrap_content"/>
 
                 </LinearLayout>
@@ -235,7 +235,7 @@
 
                     <TextView
                         android:id="@+id/repeat_no_text"
-                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:textColor="@android:color/black"
                         android:layout_width="wrap_content"
                         android:textSize="15dp"
                         android:layout_height="wrap_content"
@@ -245,7 +245,7 @@
                         android:layout_width="wrap_content"
                         android:id="@+id/set_repeat_no"
                         android:textSize="15dp"
-                        android:textColor="@color/abc_secondary_text_material_dark"
+                        android:textColor="@android:color/black"
                         android:layout_height="wrap_content"/>
 
                 </LinearLayout>
@@ -279,7 +279,7 @@
 
                     <TextView
                         android:id="@+id/repeat_type_text"
-                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:textColor="@android:color/black"
                         android:layout_width="wrap_content"
                         android:textSize="15dp"
                         android:layout_height="wrap_content"
@@ -289,7 +289,7 @@
                         android:layout_width="wrap_content"
                         android:id="@+id/set_repeat_type"
                         android:textSize="15dp"
-                        android:textColor="@color/abc_secondary_text_material_dark"
+                        android:textColor="@android:color/black"
                         android:layout_height="wrap_content"/>
 
                 </LinearLayout>
@@ -313,7 +313,7 @@
         android:clickable="true"
         android:onClick="selectFab1"
         fab:fab_icon="@drawable/ic_notifications_off_grey600_24dp"
-        fab:fab_colorNormal="@color/colorAccent"
+        fab:fab_colorNormal="@color/colorAccent2"
         fab:fab_colorPressed="@color/fab_pressed"
         app:fab_size="normal"
         android:layout_alignParentLeft="true"
@@ -328,7 +328,7 @@
         android:clickable="true"
         android:onClick="selectFab2"
         fab:fab_icon="@drawable/ic_notifications_on_white_24dp"
-        fab:fab_colorNormal="@color/colorAccent"
+        fab:fab_colorNormal="@color/colorAccent2"
         fab:fab_colorPressed="@color/fab_pressed"
         app:fab_size="normal"
         android:layout_alignParentLeft="true"

@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">당뇨그루(리마인더)</string>
+    <string name="app_name">당뇨그루-리마인더</string>
 
     <string name="no_cardetails">새 리마인터를 생성하려면 아래의 추가 버튼을 누르세요.</string>
     <string name="title_activity_add_reminder">리마인더 추가하기</string>
     <string name="title_activity_edit_reminder">리마인더 수정하기</string>
     <string name="title_activity_licenses">라이센스</string>
 
+    <string name="set_reminder_title">리마인터 타이틀 설정</string>
     <string name="add_reminder">리마인더</string>
     <string name="details">상세</string>
     <string name="date">날짜</string>

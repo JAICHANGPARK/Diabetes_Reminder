@@ -134,7 +134,7 @@ public class HomeActivity extends AppCompatActivity implements LoaderManager.Loa
 
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Set Reminder Title");
+        builder.setTitle(getResources().getString(R.string.set_reminder_title));
 
         final EditText input = new EditText(this);
         input.setInputType(InputType.TYPE_CLASS_TEXT);
