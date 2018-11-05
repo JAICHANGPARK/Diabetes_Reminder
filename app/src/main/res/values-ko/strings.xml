@@ -1,22 +1,22 @@
 <resources>
     <string name="app_name">당뇨그루(리마인더)</string>
 
-    <string name="no_cardetails">Click on the button below to begin creating your reminder!</string>
-    <string name="title_activity_add_reminder">Add Reminder</string>
-    <string name="title_activity_edit_reminder">Edit Reminder</string>
-    <string name="title_activity_licenses">Licenses</string>
+    <string name="no_cardetails">새 리마인터를 생성하려면 아래의 추가 버튼을 누르세요.</string>
+    <string name="title_activity_add_reminder">리마인더 추가하기</string>
+    <string name="title_activity_edit_reminder">리마인더 수정하기</string>
+    <string name="title_activity_licenses">라이센스</string>
 
-    <string name="add_reminder">Reminder</string>
-    <string name="details">Details</string>
-    <string name="date">Date</string>
-    <string name="time">Time</string>
-    <string name="repeat">Repeat</string>
-    <string name="repeat_off">Off</string>
-    <string name="repeat_no">Repetition Interval </string>
+    <string name="add_reminder">리마인더</string>
+    <string name="details">상세</string>
+    <string name="date">날짜</string>
+    <string name="time">시간</string>
+    <string name="repeat">반복</string>
+    <string name="repeat_off">끄기</string>
+    <string name="repeat_no">반복 주기 </string>
     <string name="repeat_type">Type of Repetitions</string>
 
     <string name="action_discard_reminder">Discard Reminder</string>
-    <string name="action_save_reminder">Save Reminder</string>
+    <string name="action_save_reminder">리마인더 저장</string>
 
     <string name="editor_activity_title_new_reminder">Add Reminder Details</string>
     <string name="editor_activity_title_edit_reminder">Edit Reminder</string>

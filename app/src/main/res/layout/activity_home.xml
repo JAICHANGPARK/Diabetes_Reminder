@@ -55,7 +55,7 @@
         android:layout_alignParentRight="true"
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/ic_add"
-        app:backgroundTint="@color/colorPrimary"
+        app:backgroundTint="@color/colorAccent2"
         app:fabSize="normal"/>
 
 </RelativeLayout>
